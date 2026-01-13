@@ -1,6 +1,6 @@
 {
-  "name": "@yourcompany/eslint-config",
-  "version": "1.0.0",
+  "name": "@medianaura/eslint-config",
+  "version": "0.0.1",
   "description": "Shareable ESLint configuration for TypeScript projects",
   "keywords": [
     "eslint",
@@ -10,10 +10,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourcompany/eslint-config.git"
+    "url": "https://github.com/MedianAura/eslint-config.git"
   },
   "license": "MIT",
-  "author": "Your Name",
+  "author": "MedianAura",
   "type": "module",
   "exports": {
     ".": {
@@ -21,14 +21,22 @@
       "require": "./index.cjs"
     }
   },
-  "main": "index.js",
+  "main": "index.mjs",
   "files": [
     "*.js",
     "*.mjs",
     "*.cjs",
     "*.d.ts"
   ],
+  "scripts": {
+    "check": "concatenate check",
+    "fix": "concatenate fix",
+    "release": "automaton version"
+  },
   "dependencies": {
+    "@eslint/js": "^9.39.2",
+    "@typescript-eslint/parser": "^8.53.0",
+    "eslint-formatter-pretty": "^7.0.0",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import-x": "^4.16.1",
@@ -39,14 +47,22 @@
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-unicorn": "^62.0.0",
     "eslint-plugin-unused-imports": "^4.3.0",
-    "eslint-plugin-zod": "^1.4.0"
+    "eslint-plugin-zod": "^1.4.0",
+    "typescript-eslint": "^8.53.0"
+  },
+  "devDependencies": {
+    "@medianaura/automaton": "^0.2.0",
+    "@medianaura/concatenate": "^0.3.2",
+    "@types/node": "^25.0.7",
+    "eslint": "^9.39.2",
+    "typescript": "^5.9.3"
   },
   "peerDependencies": {
-    "@eslint/js": "^9.0.0",
-    "@typescript-eslint/parser": "^8.0.0",
-    "eslint": "^9.0.0",
-    "typescript": "^5.0.0",
-    "typescript-eslint": "^8.0.0"
+    "@eslint/js": "^9.39.2",
+    "@typescript-eslint/parser": "^8.53.0",
+    "eslint": "^9.39.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.53.0"
   },
   "peerDependenciesMeta": {
     "prettier": {

@@ -5,13 +5,13 @@ Shareable ESLint configuration for TypeScript projects.
 ## Installation
 
 ```bash
-npm install -D @yourcompany/eslint-config
+npm install -D @medianaura/eslint-config
 ```
 
 You'll also need to install the peer dependencies:
 
 ```bash
-npm install -D eslint @eslint/js typescript @typescript-eslint/parser typescript-eslint
+npm install -D typescript
 ```
 
 ## Usage
@@ -19,7 +19,7 @@ npm install -D eslint @eslint/js typescript @typescript-eslint/parser typescript
 Create an `eslint.config.mjs` file in your project root:
 
 ```javascript
-import config from "@yourcompany/eslint-config";
+import config from '@medianaura/eslint-config';
 
 export default config;
 ```
@@ -29,12 +29,31 @@ export default config;
 You can customize the configuration by using the `createConfig` function:
 
 ```javascript
-import { createConfig } from "@yourcompany/eslint-config";
+import { createConfig } from '@medianaura/eslint-config';
 
 export default createConfig({
-  ignores: ["build/**/*", "temp/**/*"],
-  testFilePatterns: ["tests/**/*", "**/*.test.ts", "**/*.spec.ts"],
+  ignores: ['build/**/*', 'temp/**/*'],
+  testFilePatterns: ['tests/**/*', '**/*.test.ts', '**/*.spec.ts'],
 });
+```
+
+### Using with Pretty Formatter
+
+The package includes `eslint-formatter-pretty` as a dependency for enhanced error output. To use it:
+
+```bash
+npx eslint . --format=node_modules/eslint-formatter-pretty
+```
+
+Or add to your package.json scripts:
+
+```json
+{
+  "scripts": {
+    "lint": "eslint . --format pretty",
+    "lint:fix": "eslint . --fix --format pretty"
+  }
+}
 ```
 
 ## Features
@@ -42,9 +61,12 @@ export default createConfig({
 - TypeScript support with strict type checking
 - Import sorting and organization
 - Code quality rules via ESLint, Unicorn, and other plugins
-- Prettier integration
+- Prettier integration (uses local .prettierrc.yaml if available)
 - Test file special handling
 - Zod schema validation rules
+- Node.js best practices
+- RegExp best practices
+- Promise best practices
 
 ## Included Plugins
 
@@ -60,3 +82,9 @@ export default createConfig({
 - `eslint-plugin-regexp` - RegExp best practices
 - `eslint-plugin-zod` - Zod schema validation rules
 - `eslint-plugin-n` - Node.js specific rules
+
+## Requirements
+
+- Node.js >= 22.0.0
+- TypeScript >= 5.9.3
+- ESLint >= 9.39.2

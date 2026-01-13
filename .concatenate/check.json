@@ -1,0 +1,9 @@
+{
+  "type": "parallel",
+  "actions": [
+    {
+      "label": "Checking with Prettier",
+      "command": "prettier --list-different --cache ."
+    }
+  ]
+}

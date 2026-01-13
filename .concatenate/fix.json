@@ -1,0 +1,9 @@
+{
+  "type": "series",
+  "actions": [
+    {
+      "label": "Fixing with Prettier",
+      "command": "prettier --write --list-different --cache ."
+    }
+  ]
+}
