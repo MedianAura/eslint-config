@@ -30,12 +30,14 @@
   ],
   "scripts": {
     "check": "concatenate check",
+    "commit": "komity",
     "fix": "concatenate fix",
     "release": "automaton version"
   },
   "dependencies": {
     "@eslint/js": "^9.39.2",
     "@typescript-eslint/parser": "^8.53.0",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-formatter-pretty": "^7.0.0",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-eslint-comments": "^3.2.0",
@@ -53,6 +55,7 @@
   "devDependencies": {
     "@medianaura/automaton": "^0.2.0",
     "@medianaura/concatenate": "^0.3.2",
+    "@medianaura/komity": "^0.2.0",
     "@types/node": "^25.0.7",
     "eslint": "^9.39.2",
     "typescript": "^5.9.3"
