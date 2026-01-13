@@ -1,0 +1,59 @@
+{
+  "name": "@yourcompany/eslint-config",
+  "version": "1.0.0",
+  "description": "Shareable ESLint configuration for TypeScript projects",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "typescript",
+    "javascript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourcompany/eslint-config.git"
+  },
+  "license": "MIT",
+  "author": "Your Name",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.cjs"
+    }
+  },
+  "main": "index.js",
+  "files": [
+    "*.js",
+    "*.mjs",
+    "*.cjs",
+    "*.d.ts"
+  ],
+  "dependencies": {
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import-x": "^4.16.1",
+    "eslint-plugin-n": "^17.23.1",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-promise": "^7.2.1",
+    "eslint-plugin-regexp": "^2.10.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-unicorn": "^62.0.0",
+    "eslint-plugin-unused-imports": "^4.3.0",
+    "eslint-plugin-zod": "^1.4.0"
+  },
+  "peerDependencies": {
+    "@eslint/js": "^9.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0",
+    "typescript": "^5.0.0",
+    "typescript-eslint": "^8.0.0"
+  },
+  "peerDependenciesMeta": {
+    "prettier": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}
