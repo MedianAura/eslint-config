@@ -1,6 +1,6 @@
 {
   "name": "@medianaura/eslint-config",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Shareable ESLint configuration for TypeScript projects",
   "keywords": [
     "eslint",
